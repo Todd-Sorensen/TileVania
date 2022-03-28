@@ -15,7 +15,9 @@ GameObject:
   - component: {fileID: 6071538706784512388}
   - component: {fileID: 6071538706784512389}
   - component: {fileID: 6071538706784512390}
-  m_Layer: 0
+  - component: {fileID: 1833997908}
+  - component: {fileID: 7925744683201097332}
+  m_Layer: 8
   m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -93,7 +95,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 713520287
-  m_SortingLayer: 5
+  m_SortingLayer: 6
   m_SortingOrder: 0
   m_Sprite: {fileID: 1857188551261513057, guid: 965a91a5efee9fa438ddcd13fb72e4c9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -121,7 +123,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 2
+  m_GravityScale: 3
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -136,12 +138,12 @@ CapsuleCollider2D:
   m_GameObject: {fileID: 6071538707905367689}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: e6aae7eafc52ba040abf154eb7366880, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.04011178, y: -0.058625102}
-  m_Size: {x: 0.512486, y: 0.8827498}
+  m_Offset: {x: -0.04011178, y: -0.05044079}
+  m_Size: {x: 0.512486, y: 0.86638117}
   m_Direction: 0
 --- !u!114 &6071538706784512389
 MonoBehaviour:
@@ -249,6 +251,35 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3daac37b379e62548a048bffbbec123c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  feetCapsuleCollider: {fileID: 1833997908}
   moveSpeed: 5
-  jumpForce: 9.7
+  jumpForce: 15
   climbingSpeed: 5
+--- !u!70 &1833997908
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6071538707905367689}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.046249483, y: -0.375}
+  m_Size: {x: 0.48325416, y: 0.2500001}
+  m_Direction: 1
+--- !u!114 &7925744683201097332
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6071538707905367689}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0affef81b4e2b4841a4a1dcaa4bb49b1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
